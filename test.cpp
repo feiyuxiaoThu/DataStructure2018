@@ -38,7 +38,7 @@ int main() {
 			c = str2[j];
 			down[j] = int(c - '0');
 		}
-	
+
 
 		vector<int> result(length1 + length2);
 		for (int j = 0; j < length1 + length2; j++) {
@@ -47,7 +47,7 @@ int main() {
 
 		for (int j = 0; j < length1; j++) {
 			for (int k = 0; k < length2; k++) {
-				result[j + k + 1] += up[j]*down[k];
+				result[j + k + 1] += up[j] * down[k];
 			}
 		}
 
@@ -63,14 +63,29 @@ int main() {
 			begin = 1;
 		}
 
-	
-		for (int j = begin; j < result.size(); j++) {
-			cout << result[j];
-		}
-		cout << endl;
-	
-	}
+		int zero = 0;
 
+		if ((length1 == 1) || (up[0] == 0))
+		{
+			zero = 1;
+		}
+
+		if ((length2 == 1) || (down[0] == 0))
+		{
+			zero = 1;
+		}
+
+		if (zero == 1) {
+			cout << 0;
+		}
+		else {
+			for (int j = begin; j < result.size(); j++) {
+				cout << result[j];
+			}
+		}
+
+		cout << endl;
+	}
 
 	delete[] str;
 
