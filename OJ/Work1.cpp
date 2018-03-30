@@ -1,3 +1,5 @@
+//向量排序并去重
+
 #include<iostream>
 #include<vector>
 #include<string>

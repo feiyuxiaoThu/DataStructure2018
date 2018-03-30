@@ -1,8 +1,12 @@
+//精确乘法
+
 #include<iostream>
 #include<cstring>
 using namespace std;
 
 int transfer(char n);
+
+// \frac{2}{1}
 
 
 int main()
